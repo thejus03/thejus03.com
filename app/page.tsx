@@ -11,10 +11,10 @@ export default function Home() {
           <p className="py-3">Hi, I&apos;m Thejus 👾</p>
           <p className="py-3">
             I&apos;m a software engineer based in Singapore. I am currently a
-            computer science undergraduate at the <a className="hover:underline text-rose-500" href="https://www.nus.edu.sg" target="_blank" rel="noopener noreferrer">National University of
+            computer science undergraduate at the <a className="hover:underline text-rose-500 hover:text-rose-600" href="https://www.nus.edu.sg" target="_blank" rel="noopener noreferrer">National University of
             Singapore (NUS)</a>.
           </p>
-          <p className="">
+          <p className="py-3">
             I enjoy building! Connect with me on <a className="hover:underline text-rose-500" href="https://www.linkedin.com/in/thejus03/" target="_blank" rel="noopener noreferrer">LinkedIn</a> and <a className="hover:underline text-rose-500" href="https://github.com/thejus03" target="_blank" rel="noopener noreferrer">GitHub</a> to see what I&apos;m up to!
           </p>
           <p className="py-3">
@@ -22,7 +22,7 @@ export default function Home() {
           </p>
           <h1 className="font-bold text-zinc-300 text-lg py-2 px-3 rounded-xl border border-stone-700 bg-stone-800 inline-block mt-10">{'> '}date</h1>
           <p className="py-3">
-            I&apos;m <b>currently</b>:
+            I&apos;m <span className="font-semibold">currently</span>:
           </p>
           <ul className="list-disc ml-6 pb-3">
             <li>Open for internship opportunities in 2026</li>
@@ -31,14 +31,14 @@ export default function Home() {
           </ul>
           <h1 className="font-bold text-zinc-300 text-lg py-2 px-3 rounded-xl border border-stone-700 bg-stone-800 inline-block mt-10">{'> '}grep &quot;work&quot; *</h1>
           <p className="py-3">
-            Previously, I&apos;ve <b>interned</b> as a:
+            Previously, I&apos;ve <span className="font-semibold">interned</span> as a:
           </p>
           <ul className="list-disc ml-6 pb-3">
             <li>Software Engineer at <a className="hover:underline text-rose-500" href="https://www.invigilo.ai" target="_blank" rel="noopener noreferrer">Invigilo AI</a></li>
           </ul>
           <h1 className="font-bold text-zinc-300 text-lg py-2 px-3 rounded-xl border border-stone-700 bg-stone-800 inline-block mt-10">{'> '}grep &quot;projects&quot; *</h1>
-          <p className="my-3">
-            Few fun <b>projects</b> I&apos;ve worked on:
+          <p className="py-3">
+            Few fun <span className="font-semibold">projects</span> I&apos;ve worked on:
           </p>
           <ul className="list-disc ml-6 pb-3">
             <li><a href="https://nusmods.com/optimiser" className="hover:underline text-rose-500" target="_blank" rel="noopener noreferrer">Timetable Optimiser for NUSMods</a> - helping over 30,000 students in NUS</li>

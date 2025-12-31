@@ -7,7 +7,7 @@ export default function Home() {
       {/* <Navbar /> */}
       <div>
         <div className="text-[16px]">
-          <h1 className="font-bold text-zinc-300 text-2xl py-2 px-4 rounded-xl border border-stone-700 bg-stone-800 inline-block">{'> '}whoami</h1>
+          <h1 className="font-bold text-zinc-300 text-lg py-2 px-3 rounded-xl border border-stone-700 bg-stone-800 inline-block">{'> '}whoami</h1>
           <p className="py-3">Hi, I&apos;m Thejus 👾</p>
           <p className="py-3">
             I&apos;m a software engineer based in Singapore. I am currently a
@@ -20,7 +20,7 @@ export default function Home() {
           <p className="py-3">
             Feel free to contact me via <a className="hover:underline text-rose-500" href="mailto:thejusunni@hotmail.com" target="_blank" rel="noopener noreferrer">email</a> or <a className="hover:underline text-rose-500" href="https://t.me/thejus03" target="_blank" rel="noopener noreferrer">telegram</a>.
           </p>
-          <h1 className="font-bold text-zinc-300 text-2xl py-2 px-4 rounded-xl border border-stone-700 bg-stone-800 inline-block mt-10">{'> '}date</h1>
+          <h1 className="font-bold text-zinc-300 text-lg py-2 px-3 rounded-xl border border-stone-700 bg-stone-800 inline-block mt-10">{'> '}date</h1>
           <p className="py-3">
             I&apos;m <b>currently</b>:
           </p>
@@ -29,14 +29,14 @@ export default function Home() {
             <li>Building side projects or working on open-source software</li>
             <li>Trying to catch up on my Netflix watchlist</li>
           </ul>
-          <h1 className="font-bold text-zinc-300 text-2xl py-2 px-4 rounded-xl border border-stone-700 bg-stone-800 inline-block mt-10">{'> '}grep &quot;work&quot; *</h1>
+          <h1 className="font-bold text-zinc-300 text-lg py-2 px-3 rounded-xl border border-stone-700 bg-stone-800 inline-block mt-10">{'> '}grep &quot;work&quot; *</h1>
           <p className="py-3">
             Previously, I&apos;ve <b>interned</b> as a:
           </p>
           <ul className="list-disc ml-6 pb-3">
             <li>Software Engineer at <a className="hover:underline text-rose-500" href="https://www.invigilo.ai" target="_blank" rel="noopener noreferrer">Invigilo AI</a></li>
           </ul>
-          <h1 className="font-bold text-zinc-300 text-2xl py-2 px-4 rounded-xl border border-stone-700 bg-stone-800 inline-block mt-10">{'> '}grep &quot;projects&quot; *</h1>
+          <h1 className="font-bold text-zinc-300 text-lg py-2 px-3 rounded-xl border border-stone-700 bg-stone-800 inline-block mt-10">{'> '}grep &quot;projects&quot; *</h1>
           <p className="my-3">
             Few fun <b>projects</b> I&apos;ve worked on:
           </p>

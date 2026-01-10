@@ -31,10 +31,10 @@ export default function Home() {
           </ul>
           <h1 className="font-bold text-zinc-300 text-lg py-2 px-3 rounded-xl border border-stone-700 bg-stone-800 inline-block mt-10">{'> '}grep &quot;work&quot; *</h1>
           <p className="py-3">
-            Previously, I&apos;ve <span className="font-semibold">interned</span> as a:
+           I&apos;ve <span className="font-semibold">previously</span> been a:
           </p>
           <ul className="list-disc ml-6 pb-3">
-            <li>Software Engineer at <a className="hover:underline text-rose-500" href="https://www.invigilo.ai" target="_blank" rel="noopener noreferrer">Invigilo AI</a></li>
+            <li>Software Engineering Intern at <a className="hover:underline text-rose-500" href="https://www.invigilo.ai" target="_blank" rel="noopener noreferrer">Invigilo AI</a></li>
           </ul>
           <h1 className="font-bold text-zinc-300 text-lg py-2 px-3 rounded-xl border border-stone-700 bg-stone-800 inline-block mt-10">{'> '}grep &quot;projects&quot; *</h1>
           <p className="py-3">

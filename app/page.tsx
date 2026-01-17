@@ -42,7 +42,7 @@ export default function Home() {
           </p>
           <ul className="list-disc ml-6 pb-3">
             <li><a href="https://nusmods.com/optimiser" className="hover:underline text-rose-500" target="_blank" rel="noopener noreferrer">Timetable Optimiser for NUSMods</a> - helping over 30,000 students in NUS</li>
-            <li><a href="https://tracktern.com" className="hover:underline text-rose-500" target="_blank" rel="noopener noreferrer">TrackTern</a> - platform for tracking internships (used by 600+ users)</li>
+            <li><a href="https://tracktern.com" className="hover:underline text-rose-500" target="_blank" rel="noopener noreferrer">TrackTern</a> - platform for tracking internships (used by 800+ users)</li>
             <li><a href="https://github.com/thejus03/portfoliomatic" className="hover:underline text-rose-500" target="_blank" rel="noopener noreferrer">Financial portfolio robo-advisory tool</a> - built for fun</li>
             <li><a href="https://github.com/thejus03/chessai" className="hover:underline text-rose-500" target="_blank" rel="noopener noreferrer">AI Chess engine</a> - thinks 5 moves ahead in less than 10 seconds</li>
             <li><a href="https://github.com/thejus03/Text-Emotion-Neural" className="hover:underline text-rose-500" target="_blank" rel="noopener noreferrer">Text Emotion Recognition</a> - first and only neural network i created</li>

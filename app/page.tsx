@@ -25,7 +25,7 @@ export default function Home() {
             I&apos;m <span className="font-semibold">currently</span>:
           </p>
           <ul className="list-disc ml-6 pb-3">
-            <li>Open for internship opportunities in 2026</li>
+            <li>Open for internship opportunities in 2027</li>
             <li>Building side projects or working on open-source software</li>
             <li>Trying to catch up on my Netflix watchlist</li>
           </ul>

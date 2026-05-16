@@ -131,15 +131,40 @@
   }
 
   .terminal-list li {
-    padding: 0.25rem 0;
+    padding: 0.25rem 0.5rem;
     padding-left: 2.5rem;
     position: relative;
+    border-radius: 2px;
+    transition: background-color 0.1s ease;
+  }
+
+  .terminal-list li:hover {
+    background-color: rgb(41 37 36);
   }
 
   .terminal-list li::before {
     content: '[+]';
     position: absolute;
     left: 0;
-    color: rgb(244 63 94);
+    background: linear-gradient(to right,
+      #a1a1aa 0% 33.3%,
+      #f43f5e 33.3% 66.6%,
+      #a1a1aa 66.6% 100%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .terminal-list-note li::before {
+    content: '[*]';
+    background: linear-gradient(to right,
+      #a1a1aa 0% 33.3%,
+      #f43f5e 33.3% 66.6%,
+      #a1a1aa 66.6% 100%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
   }
 }

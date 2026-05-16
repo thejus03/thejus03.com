@@ -7,7 +7,7 @@ export default function Home() {
       {/* <Navbar /> */}
       <div>
         <div className="text-[16px]">
-          <h1 className="font-bold text-zinc-300 text-lg py-2 px-3 rounded-xl border border-stone-700 bg-stone-800 inline-block">{'> '}whoami</h1>
+          <span className="text-zinc-400 text-lg py-1 px-3 rounded-xl border border-stone-700 bg-stone-800 inline-block">~$ whoami</span>
           <p className="py-3">Hi, I&apos;m Thejus 👾</p>
           <p className="py-3">
             I&apos;m a software engineer based in Singapore. I am currently a
@@ -20,7 +20,7 @@ export default function Home() {
           <p className="py-3">
             Feel free to contact me via <a className="hover:underline text-rose-500" href="mailto:thejusunni@hotmail.com" target="_blank" rel="noopener noreferrer">email</a> or <a className="hover:underline text-rose-500" href="https://t.me/thejus03" target="_blank" rel="noopener noreferrer">telegram</a>.
           </p>
-          <h1 className="font-bold text-zinc-300 text-lg py-2 px-3 rounded-xl border border-stone-700 bg-stone-800 inline-block mt-10">{'> '}date</h1>
+          <span className="text-zinc-400 text-lg py-1 px-3 rounded-xl border border-stone-700 bg-stone-800 inline-block mt-10">~$ date</span>
           <p className="py-3">
             I&apos;m <span className="font-semibold">currently</span>:
           </p>
@@ -29,27 +29,35 @@ export default function Home() {
             <li>Building side projects or working on open-source software</li>
             <li>Trying to catch up on my Netflix watchlist</li>
           </ul>
-          <h1 className="font-bold text-zinc-300 text-lg py-2 px-3 rounded-xl border border-stone-700 bg-stone-800 inline-block mt-10">{'> '}grep &quot;work&quot; *</h1>
+          <span className="text-zinc-400 text-lg py-1 px-3 rounded-xl border border-stone-700 bg-stone-800 inline-block mt-10">~$ grep &quot;work&quot; *</span>
           <p className="py-3">
            I&apos;ve <span className="font-semibold">previously</span> been a:
           </p>
           <ul className="list-disc ml-6 pb-3">
+            <li>Software Engineering Intern at <a className="hover:underline text-rose-500" href="https://www.bloomberg.com/company/values/tech-at-bloomberg/" target="_blank" rel="noopener noreferrer">Bloomberg</a></li>
             <li>Software Engineering Intern at <a className="hover:underline text-rose-500" href="https://www.invigilo.ai" target="_blank" rel="noopener noreferrer">Invigilo AI</a></li>
           </ul>
-          <h1 className="font-bold text-zinc-300 text-lg py-2 px-3 rounded-xl border border-stone-700 bg-stone-800 inline-block mt-10">{'> '}grep &quot;projects&quot; *</h1>
+          <span className="text-zinc-400 text-lg py-1 px-3 rounded-xl border border-stone-700 bg-stone-800 inline-block mt-10">~$ grep &quot;projects&quot; *</span>
           <p className="py-3">
             Few fun <span className="font-semibold">projects</span> I&apos;ve worked on:
           </p>
           <ul className="list-disc ml-6 pb-3">
-            <li><a href="https://nusmods.com/optimiser" className="hover:underline text-rose-500" target="_blank" rel="noopener noreferrer">Timetable Optimiser for NUSMods</a> - helping over 30,000 students in NUS</li>
+            <li><a href="https://nusmods.com/optimiser" className="hover:underline text-rose-500" target="_blank" rel="noopener noreferrer">NUSMods &lt;&gt; Timetable Optimiser</a> - helping over 40,000 students in NUS find an optimal timetable
+              in a couple of seconds</li>
             <li><a href="https://tracktern.com" className="hover:underline text-rose-500" target="_blank" rel="noopener noreferrer">TrackTern</a> - platform for tracking internships (used by 800+ users)</li>
             <li><a href="https://github.com/thejus03/portfoliomatic" className="hover:underline text-rose-500" target="_blank" rel="noopener noreferrer">Financial portfolio robo-advisory tool</a> - built for fun</li>
             <li><a href="https://github.com/thejus03/chessai" className="hover:underline text-rose-500" target="_blank" rel="noopener noreferrer">AI Chess engine</a> - thinks 5 moves ahead in less than 10 seconds</li>
             <li><a href="https://github.com/thejus03/Text-Emotion-Neural" className="hover:underline text-rose-500" target="_blank" rel="noopener noreferrer">Text Emotion Recognition</a> - first and only neural network i created</li>
           </ul>
-          
+
+          <div className="mt-16 pt-4 border-t border-stone-700 text-zinc-400 text-sm flex items-center gap-1">
+            <span>thejus03@MacBook-Pro:~$</span>
+            <span style={{ animation: 'blink 1.1s step-start infinite' }}>▌</span>
+          </div>
+
         </div>
       </div>
+      <style>{`@keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }`}</style>
     </div>
   );
 }

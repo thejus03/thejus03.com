@@ -10,13 +10,10 @@ const LINES = [
 export default function BootSequence() {
   const [visibleCount, setVisibleCount] = useState(0);
   const [fading, setFading] = useState(false);
-  const [done, setDone] = useState(false);
+  const [done, setDone] = useState(() => typeof window !== "undefined" && !!sessionStorage.getItem("booted"));
 
   useEffect(() => {
-    if (sessionStorage.getItem("booted")) {
-      setDone(true);
-      return;
-    }
+    if (done) return;
 
     const timers: ReturnType<typeof setTimeout>[] = [];
 

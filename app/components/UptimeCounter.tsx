@@ -6,27 +6,19 @@ interface BatteryManager extends EventTarget {
   charging: boolean;
 }
 
+interface NavigatorWithBattery extends Navigator {
+  getBattery(): Promise<BatteryManager>;
+}
+
 export default function UptimeCounter() {
   const [seconds, setSeconds] = useState(0);
   const [battery, setBattery] = useState<{ level: number; charging: boolean } | null>(null);
-  const [online, setOnline] = useState(true);
-  const [cores, setCores] = useState<number | null>(null);
-  const [resolution, setResolution] = useState<string | null>(null);
-  const [connType, setConnType] = useState<string | null>(null);
-
+  const [online, setOnline] = useState(() => typeof window !== "undefined" ? navigator.onLine : true);
+  const [cores] = useState<number | null>(() => typeof window !== "undefined" ? navigator.hardwareConcurrency ?? null : null);
+  const [resolution] = useState<string | null>(() => typeof window !== "undefined" ? `${screen.width}x${screen.height}` : null);
 
   useEffect(() => {
     const interval = setInterval(() => setSeconds(s => s + 1), 1000);
-
-    setCores(navigator.hardwareConcurrency ?? null);
-    setResolution(`${screen.width}x${screen.height}`);
-    const conn = (navigator as any).connection;
-    if (conn) {
-      setConnType(conn.effectiveType);
-      conn.addEventListener("change", () => setConnType(conn.effectiveType));
-    }
-
-    setOnline(navigator.onLine);
 
     const handleOnline = () => setOnline(true);
     const handleOffline = () => setOnline(false);
@@ -34,7 +26,7 @@ export default function UptimeCounter() {
     window.addEventListener("offline", handleOffline);
 
     if ("getBattery" in navigator) {
-      (navigator as any).getBattery().then((bat: BatteryManager) => {
+      (navigator as NavigatorWithBattery).getBattery().then((bat: BatteryManager) => {
         setBattery({ level: bat.level, charging: bat.charging });
         const update = () => setBattery({ level: bat.level, charging: bat.charging });
         bat.addEventListener("levelchange", update);
@@ -64,8 +56,7 @@ export default function UptimeCounter() {
       )}
       {cores && <div>cpu: {cores} cores</div>}
       {resolution && <div>res: {resolution}</div>}
-
-      <div>net: <span className={online ? "text-green-600" : "text-rose-500"}>{online ? "online" : "offline"}</span>{connType && <span className="text-zinc-600"> ({connType})</span>}</div>
+      <div>net: <span className={online ? "text-green-600" : "text-rose-500"}>{online ? "online" : "offline"}</span></div>
     </div>
   );
 }

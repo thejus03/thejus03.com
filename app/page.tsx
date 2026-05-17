@@ -46,11 +46,11 @@ export default function Home() {
           </ul>
           <span className="text-zinc-400 text-lg py-1 px-3 rounded-lg border border-stone-700 bg-stone-800 inline-block mt-10">~$ grep &quot;projects&quot; *</span>
           <p className="py-3">
-            Few fun <span className="font-semibold">projects</span> I&apos;ve worked on:
+            A few fun <span className="font-semibold">projects</span> I&apos;ve worked on:
           </p>
           <ul className="terminal-list terminal-list-note">
-            <li><a href="https://nusmods.com/optimiser" className="hover:underline text-rose-500" target="_blank" rel="noopener noreferrer">NUSMods &lt;&gt; Timetable Optimiser</a> &mdash; helping over 40,000 students in NUS find an optimal timetable
-              in a couple of seconds</li>
+            <li><a href="https://nusmods.com/optimiser" className="hover:underline text-rose-500" target="_blank" rel="noopener noreferrer">NUSMods &lt;&gt; Timetable Optimiser</a> &mdash; saves over 40,000 students in NUS several hours 
+            of manual timetable planning every semester</li>
             <li><a href="https://tracktern.com" className="hover:underline text-rose-500" target="_blank" rel="noopener noreferrer">TrackTern</a> &mdash; platform for tracking internships (used by 800+ users)</li>
             <li><a href="https://github.com/thejus03/portfoliomatic" className="hover:underline text-rose-500" target="_blank" rel="noopener noreferrer">Financial portfolio robo-advisor</a> &mdash; optimises stock allocations using Black-Litterman modelling</li>
             <li><a href="https://github.com/thejus03/chessai" className="hover:underline text-rose-500" target="_blank" rel="noopener noreferrer">AI Chess engine</a> &mdash; thinks 5 moves ahead in less than 10 seconds</li>

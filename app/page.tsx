@@ -1,13 +1,11 @@
 
 import UptimeCounter from "./components/UptimeCounter";
-import BootSequence from "./components/BootSequence";
 
 export default function Home() {
   return (
     <div
       className="flex min-h-screen px-5 flex-col max-w-3xl mx-auto text-white my-12"
     >
-      <BootSequence />
       <div className="fixed top-4 right-4 text-xs text-zinc-600 font-mono hidden sm:block">
         <UptimeCounter />
       </div>

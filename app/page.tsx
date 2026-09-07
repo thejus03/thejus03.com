@@ -1,68 +1,146 @@
-
+import Image from "next/image";
 import UptimeCounter from "./components/UptimeCounter";
+
+const logoDevToken = "pk_OCcT39CnSs2GzWpUOOiFXg";
+
+function CompanyLogo({ name, whiteBackground = false }: { name: string; whiteBackground?: boolean }) {
+  const format = whiteBackground ? "jpg" : "png";
+  const logoUrl = `https://img.logo.dev/name/${encodeURIComponent(name)}?token=${logoDevToken}&size=24&format=${format}&retina=true`;
+
+  return (
+    <Image
+      className="company-logo"
+      src={logoUrl}
+      alt={`${name} logo`}
+      width={24}
+      height={24}
+      unoptimized
+    />
+  );
+}
+
+const navItems = [
+  { href: "#about", label: "about" },
+  { href: "#now", label: "now" },
+  { href: "#work", label: "work" },
+  { href: "#projects", label: "projects" },
+];
 
 export default function Home() {
   return (
-    <div
-      className="flex min-h-screen px-5 flex-col max-w-3xl mx-auto text-white my-12"
-    >
-      <div className="fixed top-4 right-4 text-xs text-zinc-600 font-mono hidden sm:block">
+    <div className="site-shell min-h-screen text-white">
+      <div className="ambient-grid" aria-hidden="true" />
+
+      <aside className="system-readout hidden xl:block" aria-label="System information">
         <UptimeCounter />
-      </div>
-      {/* <Navbar /> */}
-      <div>
-        <div className="text-[16px]">
-          <span className="text-zinc-400 text-lg py-1 px-3 rounded-lg border border-stone-700 bg-stone-800 inline-block">~$ whoami</span>
-          <p className="py-3">Hi, I&apos;m Thejus 👾</p>
-          <p className="py-3">
-            I&apos;m a software engineer based in Singapore. I am currently a
-            computer science undergraduate at the <a className="hover:underline text-rose-500 hover:text-rose-600" href="https://www.nus.edu.sg" target="_blank" rel="noopener noreferrer">National University of
-            Singapore (NUS)</a>.
-          </p>
-          <p className="py-3">
-            I enjoy building! Connect with me on <a className="hover:underline text-rose-500" href="https://www.linkedin.com/in/thejus03/" target="_blank" rel="noopener noreferrer">LinkedIn</a> and <a className="hover:underline text-rose-500" href="https://github.com/thejus03" target="_blank" rel="noopener noreferrer">GitHub</a> to see what I&apos;m up to!
-          </p>
-          <p className="py-3">
-            Feel free to contact me via <a className="hover:underline text-rose-500" href="mailto:thejusunni@hotmail.com" target="_blank" rel="noopener noreferrer">email</a> or <a className="hover:underline text-rose-500" href="https://t.me/thejus03" target="_blank" rel="noopener noreferrer">telegram</a>.
-          </p>
-          <span className="text-zinc-400 text-lg py-1 px-3 rounded-lg border border-stone-700 bg-stone-800 inline-block mt-10">~$ date</span>
-          <p className="py-3">
-            I&apos;m <span className="font-semibold">currently</span>:
-          </p>
-          <ul className="terminal-list terminal-list-note pb-3">
+      </aside>
+
+      <header className="terminal-header">
+        <a href="#about" className="terminal-identity" aria-label="Back to top">
+          <span className="status-dot" aria-hidden="true" />
+          <span className="text-zinc-500">thejus03@portfolio</span>
+          <span className="text-zinc-700">:</span>
+          <span className="text-zinc-300">~</span>
+        </a>
+
+        <nav className="terminal-nav" aria-label="Page sections">
+          {navItems.map((item, index) => (
+            <a key={item.href} href={item.href}>
+              <span>{String(index + 1).padStart(2, "0")}</span>
+              {item.label}
+            </a>
+          ))}
+        </nav>
+      </header>
+
+      <main className="mx-auto max-w-3xl px-5 pb-16 pt-10 sm:pt-16">
+        <section id="about" className="terminal-section scroll-mt-24">
+          <h1 className="command-heading"><span aria-hidden="true">~$</span> whoami</h1>
+          <div className="section-copy">
+            <p>Hi, I&apos;m Thejus <span className="inline-block transition-transform hover:-rotate-12 hover:scale-110">👾</span></p>
+            <p>
+              I&apos;m a software engineer based in Singapore. I am currently a
+              computer science undergraduate at the <a className="terminal-link" href="https://www.nus.edu.sg" target="_blank" rel="noopener noreferrer">National University of Singapore (NUS)</a>.
+            </p>
+            <p>
+              I enjoy building! Connect with me on <a className="terminal-link" href="https://www.linkedin.com/in/thejus03/" target="_blank" rel="noopener noreferrer">LinkedIn</a> and <a className="terminal-link" href="https://github.com/thejus03" target="_blank" rel="noopener noreferrer">GitHub</a> to see what I&apos;m up to!
+            </p>
+            <p>
+              Feel free to contact me via <a className="terminal-link" href="mailto:thejusunni@hotmail.com">email</a> or <a className="terminal-link" href="https://t.me/thejus03" target="_blank" rel="noopener noreferrer">telegram</a>.
+            </p>
+          </div>
+        </section>
+
+        <section id="now" className="terminal-section scroll-mt-24">
+          <h2 className="command-heading"><span aria-hidden="true">~$</span> date</h2>
+          <p className="section-intro">I&apos;m <strong>currently</strong>:</p>
+          <ul className="terminal-list terminal-list-note">
             <li>Open for internship opportunities in 2027</li>
             <li>Building side projects or working on open-source software</li>
             <li>Trying to catch up on my Netflix watchlist</li>
           </ul>
-          <span className="text-zinc-400 text-lg py-1 px-3 rounded-lg border border-stone-700 bg-stone-800 inline-block mt-10">~$ grep &quot;work&quot; *</span>
-          <p className="py-3">
-           I&apos;ve <span className="font-semibold">previously</span> been a (in order of recency):
-          </p>
-          <ul className="terminal-list pb-3">
-            <li>Software Engineering Intern at <a className="hover:underline text-rose-500" href="https://www.bloomberg.com/company/values/tech-at-bloomberg/" target="_blank" rel="noopener noreferrer">Bloomberg</a></li>
-            <li>Software Engineering Intern at <a className="hover:underline text-rose-500" href="https://www.invigilo.ai" target="_blank" rel="noopener noreferrer">Invigilo AI</a></li>
-          </ul>
-          <span className="text-zinc-400 text-lg py-1 px-3 rounded-lg border border-stone-700 bg-stone-800 inline-block mt-10">~$ grep &quot;projects&quot; *</span>
-          <p className="py-3">
-            A few fun <span className="font-semibold">projects</span> I&apos;ve worked on:
-          </p>
-          <ul className="terminal-list terminal-list-note">
-            <li><a href="https://nusmods.com/optimiser" className="hover:underline text-rose-500" target="_blank" rel="noopener noreferrer">NUSMods &lt;&gt; Timetable Optimiser</a> &mdash; saves over 40,000 students in NUS several hours 
-            of manual timetable planning every semester</li>
-            <li><a href="https://tracktern.com" className="hover:underline text-rose-500" target="_blank" rel="noopener noreferrer">TrackTern</a> &mdash; platform for tracking internships (used by 800+ users)</li>
-            <li><a href="https://github.com/thejus03/portfoliomatic" className="hover:underline text-rose-500" target="_blank" rel="noopener noreferrer">Financial portfolio robo-advisor</a> &mdash; optimises stock allocations using Black-Litterman modelling</li>
-            <li><a href="https://github.com/thejus03/chessai" className="hover:underline text-rose-500" target="_blank" rel="noopener noreferrer">AI Chess engine</a> &mdash; thinks 5 moves ahead in less than 10 seconds</li>
-            <li><a href="https://github.com/thejus03/Text-Emotion-Neural" className="hover:underline text-rose-500" target="_blank" rel="noopener noreferrer">Text Emotion Recognition</a> &mdash; first and only neural network i created</li>
-          </ul>
+        </section>
 
-          <div className="mt-16 pt-4 border-t border-stone-700 text-zinc-400 text-sm flex items-center gap-1">
-            <span>thejus03@MacBook-Pro:~$</span>
-            <span style={{ animation: 'blink 1.1s step-start infinite' }}>▌</span>
-          </div>
+        <section id="work" className="terminal-section scroll-mt-24">
+          <h2 className="command-heading"><span aria-hidden="true">~$</span> grep <span className="text-rose-500">&quot;work&quot;</span> *</h2>
+          <p className="section-intro">I&apos;ve <strong>previously</strong> been a (in order of recency):</p>
+          <ul className="terminal-list work-list">
+            <li>
+              <span>Software Engineering Intern at <a className="terminal-link" href="https://open.gov.sg" target="_blank" rel="noopener noreferrer">Open Government Products</a></span>
+              <CompanyLogo name="Open Government Products" />
+            </li>
+            <li>
+              <span>Software Engineering Intern at <a className="terminal-link" href="https://www.bloomberg.com/company/values/tech-at-bloomberg/" target="_blank" rel="noopener noreferrer">Bloomberg</a></span>
+              <CompanyLogo name="Bloomberg" whiteBackground />
+            </li>
+            <li>
+              <span>Software Engineering Intern at <a className="terminal-link" href="https://www.invigilo.ai" target="_blank" rel="noopener noreferrer">Invigilo AI</a></span>
+              <CompanyLogo name="Invigilo AI" />
+            </li>
+          </ul>
+        </section>
 
-        </div>
-      </div>
-      <style>{`@keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }`}</style>
+        <section id="projects" className="terminal-section scroll-mt-24">
+          <h2 className="command-heading"><span aria-hidden="true">~$</span> grep <span className="text-rose-500">&quot;projects&quot;</span> *</h2>
+          <p className="section-intro">A few fun <strong>projects</strong> I&apos;ve worked on:</p>
+          <ul className="project-list">
+            <li>
+              <a href="https://nusmods.com/optimiser" target="_blank" rel="noopener noreferrer">
+                <span><strong>NUSMods &lt;&gt; Timetable Optimiser</strong><small>Saves over 40,000 NUS students hours of manual timetable planning every semester</small></span>
+                <span className="project-arrow" aria-hidden="true">↗</span>
+              </a>
+            </li>
+            <li>
+              <a href="https://tracktern.com" target="_blank" rel="noopener noreferrer">
+                <span><strong>TrackTern</strong><small>Platform for tracking internships, used by 800+ users</small></span>
+                <span className="project-arrow" aria-hidden="true">↗</span>
+              </a>
+            </li>
+            <li>
+              <a href="https://github.com/thejus03/portfoliomatic" target="_blank" rel="noopener noreferrer">
+                <span><strong>Financial portfolio robo-advisor</strong><small>Optimises stock allocations using Black-Litterman modelling</small></span>
+                <span className="project-arrow" aria-hidden="true">↗</span>
+              </a>
+            </li>
+            <li>
+              <a href="https://github.com/thejus03/chessai" target="_blank" rel="noopener noreferrer">
+                <span><strong>AI Chess engine</strong><small>Thinks five moves ahead in less than ten seconds</small></span>
+                <span className="project-arrow" aria-hidden="true">↗</span>
+              </a>
+            </li>
+            <li>
+              <a href="https://github.com/thejus03/Text-Emotion-Neural" target="_blank" rel="noopener noreferrer">
+                <span><strong>Text Emotion Recognition</strong><small>My first neural network</small></span>
+                <span className="project-arrow" aria-hidden="true">↗</span>
+              </a>
+            </li>
+          </ul>
+        </section>
+
+        <footer className="terminal-footer">
+          <a href="#about" aria-label="Back to top">↑ top</a>
+        </footer>
+      </main>
     </div>
   );
 }

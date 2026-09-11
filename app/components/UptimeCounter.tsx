@@ -61,7 +61,7 @@ export default function UptimeCounter() {
   const s = (seconds % 60).toString().padStart(2, "0");
 
   return (
-    <div className="text-right text-zinc-600">
+    <div className="text-right text-quiet">
       <div className="flex items-center justify-end gap-1.5">
         <span className="inline-block h-1 w-1 rounded-full bg-green-600" />
         <span>uptime: {h}:{m}:{s}</span>

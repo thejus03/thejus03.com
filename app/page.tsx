@@ -1,5 +1,7 @@
 import Image from "next/image";
+import { ArrowUpRight } from "lucide-react";
 import UptimeCounter from "./components/UptimeCounter";
+import ThemeToggle from "./components/ThemeToggle";
 
 const logoDevToken = "pk_OCcT39CnSs2GzWpUOOiFXg";
 
@@ -28,7 +30,7 @@ const navItems = [
 
 export default function Home() {
   return (
-    <div className="site-shell min-h-screen text-white">
+    <div className="site-shell min-h-screen text-ink">
       <div className="ambient-grid" aria-hidden="true" />
 
       <aside className="system-readout hidden xl:block" aria-label="System information">
@@ -38,9 +40,9 @@ export default function Home() {
       <header className="terminal-header">
         <a href="#about" className="terminal-identity" aria-label="Back to top">
           <span className="status-dot" aria-hidden="true" />
-          <span className="text-zinc-500">thejus03@portfolio</span>
-          <span className="text-zinc-700">:</span>
-          <span className="text-zinc-300">~</span>
+          <span className="text-subtle">thejus03@portfolio</span>
+          <span className="text-faint">:</span>
+          <span className="text-soft">~</span>
         </a>
 
         <nav className="terminal-nav" aria-label="Page sections">
@@ -53,7 +55,9 @@ export default function Home() {
         </nav>
       </header>
 
-      <main className="mx-auto max-w-3xl px-5 pb-16 pt-10 sm:pt-16">
+      <ThemeToggle />
+
+      <main className="mx-auto max-w-3xl px-5 pb-16 pt-10 sm:pb-24 sm:pt-16">
         <section id="about" className="terminal-section scroll-mt-24">
           <h1 className="command-heading"><span aria-hidden="true">~$</span> whoami</h1>
           <div className="section-copy">
@@ -83,7 +87,7 @@ export default function Home() {
 
         <section id="work" className="terminal-section scroll-mt-24">
           <h2 className="command-heading"><span aria-hidden="true">~$</span> grep <span className="text-rose-500">&quot;work&quot;</span> *</h2>
-          <p className="section-intro">I&apos;ve <strong>previously</strong> been a (in order of recency):</p>
+          <p className="section-intro">I&apos;ve <strong>previously</strong> been a <em>(in order of recency)</em>:</p>
           <ul className="terminal-list work-list">
             <li>
               <span>Software Engineering Intern at <a className="terminal-link" href="https://open.gov.sg" target="_blank" rel="noopener noreferrer">Open Government Products</a></span>
@@ -107,31 +111,31 @@ export default function Home() {
             <li>
               <a href="https://nusmods.com/optimiser" target="_blank" rel="noopener noreferrer">
                 <span><strong>NUSMods &lt;&gt; Timetable Optimiser</strong><small>Saves over 40,000 NUS students hours of manual timetable planning every semester</small></span>
-                <span className="project-arrow" aria-hidden="true">↗</span>
+                <ArrowUpRight className="project-arrow" size={24} strokeWidth={1} aria-hidden="true" />
               </a>
             </li>
             <li>
               <a href="https://tracktern.com" target="_blank" rel="noopener noreferrer">
                 <span><strong>TrackTern</strong><small>Platform for tracking internships, used by 800+ users</small></span>
-                <span className="project-arrow" aria-hidden="true">↗</span>
+                <ArrowUpRight className="project-arrow" size={24} strokeWidth={1} aria-hidden="true" />
               </a>
             </li>
             <li>
               <a href="https://github.com/thejus03/portfoliomatic" target="_blank" rel="noopener noreferrer">
                 <span><strong>Financial portfolio robo-advisor</strong><small>Optimises stock allocations using Black-Litterman modelling</small></span>
-                <span className="project-arrow" aria-hidden="true">↗</span>
+                <ArrowUpRight className="project-arrow" size={24} strokeWidth={1} aria-hidden="true" />
               </a>
             </li>
             <li>
               <a href="https://github.com/thejus03/chessai" target="_blank" rel="noopener noreferrer">
                 <span><strong>AI Chess engine</strong><small>Thinks five moves ahead in less than ten seconds</small></span>
-                <span className="project-arrow" aria-hidden="true">↗</span>
+                <ArrowUpRight className="project-arrow" size={24} strokeWidth={1} aria-hidden="true" />
               </a>
             </li>
             <li>
               <a href="https://github.com/thejus03/Text-Emotion-Neural" target="_blank" rel="noopener noreferrer">
                 <span><strong>Text Emotion Recognition</strong><small>My first neural network</small></span>
-                <span className="project-arrow" aria-hidden="true">↗</span>
+                <ArrowUpRight className="project-arrow" size={24} strokeWidth={1} aria-hidden="true" />
               </a>
             </li>
           </ul>

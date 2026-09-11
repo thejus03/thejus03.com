@@ -11,7 +11,18 @@ const config: Config = {
   theme: {
   	extend: {
   		colors: {
-  			background: 'hsl(var(--background))',
+            ink: 'rgb(var(--ink) / <alpha-value>)',
+            copy: 'rgb(var(--copy) / <alpha-value>)',
+            soft: 'rgb(var(--soft) / <alpha-value>)',
+            subtle: 'rgb(var(--subtle) / <alpha-value>)',
+            quiet: 'rgb(var(--quiet) / <alpha-value>)',
+            faint: 'rgb(var(--faint) / <alpha-value>)',
+            surface: 'rgb(var(--surface) / <alpha-value>)',
+            raised: 'rgb(var(--raised) / <alpha-value>)',
+            outline: 'rgb(var(--outline) / <alpha-value>)',
+            'outline-strong': 'rgb(var(--outline-strong) / <alpha-value>)',
+            'outline-hover': 'rgb(var(--outline-hover) / <alpha-value>)',
+            background: 'hsl(var(--background))',
   			foreground: 'hsl(var(--foreground))',
   			card: {
   				DEFAULT: 'hsl(var(--card))',

@@ -40,9 +40,9 @@ export default function Home() {
       <header className="terminal-header">
         <a href="#about" className="terminal-identity" aria-label="Back to top">
           <span className="status-dot" aria-hidden="true" />
-          <span className="text-subtle">thejus03@portfolio</span>
-          <span className="text-faint">:</span>
+          <span className="text-subtle">thejus03@MacBook-Pro</span>
           <span className="text-soft">~</span>
+          <span className="text-faint">%</span>
         </a>
 
         <nav className="terminal-nav" aria-label="Page sections">

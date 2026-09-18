@@ -90,7 +90,7 @@ export default function Home() {
           <p className="section-intro">I&apos;ve <strong>previously</strong> been a <em>(in order of recency)</em>:</p>
           <ul className="terminal-list work-list">
             <li>
-              <span>Software Engineering Intern at <a className="terminal-link" href="https://open.gov.sg" target="_blank" rel="noopener noreferrer">Open Government Products</a></span>
+              <span>Software Engineering Intern at <a className="terminal-link" href="https://www.open.gov.sg/about-us/" target="_blank" rel="noopener noreferrer">Open Government Products</a></span>
               <CompanyLogo name="Open Government Products" />
             </li>
             <li>
